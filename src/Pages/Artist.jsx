@@ -84,7 +84,7 @@ function Artist() {
     return (
         <>
     <Navbar />
-    <div className="flex flex-col bg-indigo-50 justify-center">
+    <div className="flex flex-col bg-indigo-50 justify-center max-w-4xl mx-auto">
         <div className="flex flex-row mb-4 justify-center my-5 p-2">
             <input
                 placeholder="Search for an artist"
@@ -133,7 +133,7 @@ function Artist() {
                 })}
             </ul>}
             {artistTopTracks &&
-            <ul className="max-w-md divide-y divide-gray-200 dark:divide-gray-700 bg-white rounded-lg shadow p-2 mx-5">
+            <ul className="max-w-sm divide-y divide-gray-200 dark:divide-gray-700 bg-white rounded-lg shadow p-2 mx-5">
                 <p className="text-lg font-medium text-gray-900 text-center mb-2">Top Tracks</p>
                 {artistTopTracks.map(track => {
                     var subject = {
