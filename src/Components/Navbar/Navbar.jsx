@@ -22,7 +22,7 @@ function Navbar(){
             {/* logo section */}
             <div className='font-bold text-2xl cursor-pointer flex items-center gap-1' onClick={handleClick}>
                 <img src="Spotify_Icon_RGB_Green.png" alt="Spotify Logo"  className="h-8 mr-3"/>
-                <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Spotify API</span>
+                <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Spotify Top Stats</span>
             </div>
             {/* Menu icon */}
             <div onClick={()=>setOpen(!open)} className='absolute right-8 top-6 cursor-pointer md:hidden w-7 h-7'>

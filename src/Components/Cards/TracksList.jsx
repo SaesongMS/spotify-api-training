@@ -17,7 +17,7 @@ export default function TrackList(props){
                         {props.album}
                     </p>
                 </div>
-                <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
                     {props.preview && <button className="focus:outline-none" onClick={() => props.preview ? window.open(props.preview) : alert("No preview available")}>
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-green-500 hover:text-green-600 dark:hover:text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path d="M5 3l14 9-14 9V3z" />
