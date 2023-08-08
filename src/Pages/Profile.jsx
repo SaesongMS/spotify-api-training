@@ -10,7 +10,7 @@ function Profile() {
     const location = useLocation();
 
     const CLIENT_ID = process.env.REACT_APP_SPOTIFY_CLIENT_ID
-    const REDIRECT_URI = process.env.REACT_APP_REDIRECT_URI + "/profile"
+    const REDIRECT_URI = process.env.REACT_APP_REDIRECT_URI
     const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize"
     const RESPONSE_TYPE = "token"
     const SCOPES = ["user-read-private", "user-read-email", "user-top-read"]
