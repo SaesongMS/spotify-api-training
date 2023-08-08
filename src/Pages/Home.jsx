@@ -1,6 +1,7 @@
 import Navbar from "../Components/Navbar/Navbar";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import InfoCard from "../Components/Cards/InfoCard";
 
 function Home() {
 
@@ -31,6 +32,13 @@ function Home() {
             setProfile(data);
     }
 
+    const toProfile = () => {
+        if(!profile)
+            showProfile();
+        else
+            navigate("/profile");
+    }
+
     const showProfile = () => {
         navigate("/profile",{
             state:{
@@ -44,12 +52,15 @@ function Home() {
     return (
         <>
             <Navbar />
-            <div className="flex flex-col justify-center items-center my-3">
-                <span className="">Home</span>
+            <div className="flex flex-col justify-center items-center my-3 max-w-4xl mx-auto">
                 {profile &&
-                    <span className="text-xl text">Welcome, {profile.display_name} 👋</span>
+                    <span className="text-xl font-bold mb-0  divide-y divide-gray-400">Welcome, {profile.display_name} 👋</span>
                 }
-                {!profile && <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" onClick={showProfile}>Profile</button>}
+                <div className="flex flex-row justify-center items-center my-3">
+                    <InfoCard name="User Stats" text="See your top tracks and artists" url="userstats.JPG" onClick={toProfile}/>
+                    <InfoCard name="Artist Tracks" text="See artist's top tracks, stats and similar performers" url="artiststats.JPG" onClick={() => navigate("/artist")}/>
+
+                </div>
             </div>
         </>
     );

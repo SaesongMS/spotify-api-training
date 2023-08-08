@@ -44,7 +44,7 @@ function Profile() {
     useEffect(() => {
         if(location.state && location.state.showStats)
             setShowStats(true)
-
+        
         if(showStats)
             document.getElementById("login-button").click()
     }, [location.state, showStats])

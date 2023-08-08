@@ -11,7 +11,6 @@ function Navbar(){
         navigate("/artist");
     }
     const handleProfileClick = () => {
-        console.log("profile clicked");
         navigate("/profile");
     }
 
